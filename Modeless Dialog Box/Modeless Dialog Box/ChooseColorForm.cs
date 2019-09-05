@@ -42,6 +42,11 @@ namespace Modeless_Dialog_Box {
 
 				selectedColor = value;
 
+				if (OnColorUpdate == null) {
+
+					return;
+				}
+
 				OnColorUpdate(selectedColor);
 			}
 		}

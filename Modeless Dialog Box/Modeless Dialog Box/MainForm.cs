@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Author: Matthew Day
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,13 +19,24 @@ namespace Modeless_Dialog_Box {
 		public mainForm() {
 
 			InitializeComponent();
+
+			this.BackColor = Color.Red;
 		}
 
 		private void ChangeColorButton_Click(object sender, EventArgs e) {
 
 			ChooseColorForm chooseColor = new ChooseColorForm();
 
+			chooseColor.SelectedColor = this.BackColor;
+
+			chooseColor.OnColorUpdate += UpdateColor;
+
 			chooseColor.Show();
+		}
+
+		private void UpdateColor(Color selectedColor) {
+
+			this.BackColor = selectedColor;
 		}
 	}
 }

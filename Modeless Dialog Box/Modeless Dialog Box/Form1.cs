@@ -20,6 +20,8 @@ namespace Modeless_Dialog_Box {
 		private void ChangeColorButton_Click(object sender, EventArgs e) {
 
 			ChooseColorForm chooseColor = new ChooseColorForm();
+
+			chooseColor.Show();
 		}
 	}
 }

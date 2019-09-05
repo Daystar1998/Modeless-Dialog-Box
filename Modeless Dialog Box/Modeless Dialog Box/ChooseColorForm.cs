@@ -12,6 +12,9 @@ namespace Modeless_Dialog_Box {
 
 	public partial class ChooseColorForm : Form {
 
+		public delegate void UpdateColor(Color selectedColor);
+		public event UpdateColor OnColorUpdate;
+
 		private Color selectedColor;
 
 		public Color SelectedColor {
@@ -38,6 +41,8 @@ namespace Modeless_Dialog_Box {
 				}
 
 				selectedColor = value;
+
+				OnColorUpdate(selectedColor);
 			}
 		}
 

@@ -12,6 +12,35 @@ namespace Modeless_Dialog_Box {
 
 	public partial class ChooseColorForm : Form {
 
+		private Color selectedColor;
+
+		public Color SelectedColor {
+
+			get {
+
+				return selectedColor;
+			}
+
+			set {
+
+				if (value == Color.Red) {
+
+					redRadioButton.Select();
+				} else if (value == Color.Green) {
+
+					greenRadioButton.Select();
+				} else if (value == Color.Blue) {
+
+					blueRadioButton.Select();
+				} else {
+
+					// TODO
+				}
+
+				selectedColor = value;
+			}
+		}
+
 		public ChooseColorForm() {
 
 			InitializeComponent();

@@ -16,27 +16,43 @@ namespace Modeless_Dialog_Box {
 
 	public partial class mainForm : Form {
 
+		ChooseColorForm chooseColor;
+
 		public mainForm() {
 
 			InitializeComponent();
 
 			this.BackColor = Color.Red;
+			this.chooseColor = null;
 		}
 
 		private void ChangeColorButton_Click(object sender, EventArgs e) {
 
-			ChooseColorForm chooseColor = new ChooseColorForm();
+			if (chooseColor == null) {
 
-			chooseColor.SelectedColor = this.BackColor;
+				chooseColor = new ChooseColorForm();
 
-			chooseColor.OnColorUpdate += UpdateColor;
+				chooseColor.FormClosed += ChooseColorForm_Close;
 
-			chooseColor.Show();
+				chooseColor.SelectedColor = this.BackColor;
+
+				chooseColor.OnColorUpdate += UpdateColor;
+
+				chooseColor.Show();
+			} else {
+
+				chooseColor.Focus();
+			}
 		}
 
 		private void UpdateColor(Color selectedColor) {
 
 			this.BackColor = selectedColor;
+		}
+
+		private void ChooseColorForm_Close(object sender, EventArgs e) {
+
+			chooseColor = null;
 		}
 	}
 }

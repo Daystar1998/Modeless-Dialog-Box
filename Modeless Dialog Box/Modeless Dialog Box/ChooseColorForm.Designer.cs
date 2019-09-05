@@ -1,5 +1,5 @@
 ﻿namespace Modeless_Dialog_Box {
-	partial class mainForm {
+	partial class ChooseColorForm {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -23,36 +23,21 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			this.changeColorButton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// changeColorButton
-			// 
-			this.changeColorButton.Location = new System.Drawing.Point(189, 153);
-			this.changeColorButton.Name = "changeColorButton";
-			this.changeColorButton.Size = new System.Drawing.Size(121, 23);
-			this.changeColorButton.TabIndex = 0;
-			this.changeColorButton.Text = "Change Color";
-			this.changeColorButton.UseVisualStyleBackColor = true;
-			this.changeColorButton.Click += new System.EventHandler(this.ChangeColorButton_Click);
-			// 
-			// mainForm
+			// ChooseColorForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(507, 344);
-			this.Controls.Add(this.changeColorButton);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.ClientSize = new System.Drawing.Size(270, 185);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
-			this.Name = "mainForm";
-			this.Text = "Change Colors";
+			this.Name = "ChooseColorForm";
+			this.Text = "Choose";
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Button changeColorButton;
 	}
 }
-

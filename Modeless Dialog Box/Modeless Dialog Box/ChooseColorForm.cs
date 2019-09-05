@@ -9,17 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Modeless_Dialog_Box {
-
-	public partial class mainForm : Form {
-
-		public mainForm() {
-
+	public partial class ChooseColorForm : Form {
+		public ChooseColorForm() {
 			InitializeComponent();
-		}
-
-		private void ChangeColorButton_Click(object sender, EventArgs e) {
-
-			ChooseColorForm chooseColor = new ChooseColorForm();
 		}
 	}
 }

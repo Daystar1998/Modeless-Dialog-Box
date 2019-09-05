@@ -28,16 +28,16 @@ namespace Modeless_Dialog_Box {
 
 				if (value == Color.Red) {
 
-					redRadioButton.Select();
+					redRadioButton.Checked = true;
 				} else if (value == Color.Green) {
 
-					greenRadioButton.Select();
+					greenRadioButton.Checked = true;
 				} else if (value == Color.Blue) {
 
-					blueRadioButton.Select();
+					blueRadioButton.Checked = true;
 				} else {
 
-					// TODO
+					otherRadioButton.Checked = true;
 				}
 
 				selectedColor = value;
@@ -74,6 +74,25 @@ namespace Modeless_Dialog_Box {
 		private void BlueRadioButton_Click(object sender, EventArgs e) {
 
 			SelectedColor = Color.Blue;
+		}
+
+		private void OtherRadioButton_Click(object sender, EventArgs e) {
+
+			ColorDialog colorDialog = new ColorDialog();
+
+			colorDialog.Color = SelectedColor;
+
+			if (colorDialog.ShowDialog() == DialogResult.OK) {
+
+				selectedColor = colorDialog.Color;
+
+				if (OnColorUpdate == null) {
+
+					return;
+				}
+
+				OnColorUpdate(selectedColor);
+			}
 		}
 	}
 }

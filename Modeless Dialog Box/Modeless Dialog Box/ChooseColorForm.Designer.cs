@@ -27,6 +27,7 @@
 			this.greenRadioButton = new System.Windows.Forms.RadioButton();
 			this.blueRadioButton = new System.Windows.Forms.RadioButton();
 			this.okButton = new System.Windows.Forms.Button();
+			this.otherRadioButton = new System.Windows.Forms.RadioButton();
 			this.SuspendLayout();
 			// 
 			// redRadioButton
@@ -67,7 +68,7 @@
 			// 
 			// okButton
 			// 
-			this.okButton.Location = new System.Drawing.Point(63, 115);
+			this.okButton.Location = new System.Drawing.Point(60, 128);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(75, 23);
 			this.okButton.TabIndex = 3;
@@ -75,11 +76,24 @@
 			this.okButton.UseVisualStyleBackColor = true;
 			this.okButton.Click += new System.EventHandler(this.OkButton_Click);
 			// 
+			// otherRadioButton
+			// 
+			this.otherRadioButton.AutoSize = true;
+			this.otherRadioButton.Location = new System.Drawing.Point(12, 88);
+			this.otherRadioButton.Name = "otherRadioButton";
+			this.otherRadioButton.Size = new System.Drawing.Size(51, 17);
+			this.otherRadioButton.TabIndex = 4;
+			this.otherRadioButton.TabStop = true;
+			this.otherRadioButton.Text = "Other";
+			this.otherRadioButton.UseVisualStyleBackColor = true;
+			this.otherRadioButton.Click += new System.EventHandler(this.OtherRadioButton_Click);
+			// 
 			// ChooseColorForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(201, 150);
+			this.ClientSize = new System.Drawing.Size(201, 163);
+			this.Controls.Add(this.otherRadioButton);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.blueRadioButton);
 			this.Controls.Add(this.greenRadioButton);
@@ -99,5 +113,6 @@
 		private System.Windows.Forms.RadioButton greenRadioButton;
 		private System.Windows.Forms.RadioButton blueRadioButton;
 		private System.Windows.Forms.Button okButton;
+		private System.Windows.Forms.RadioButton otherRadioButton;
 	}
 }

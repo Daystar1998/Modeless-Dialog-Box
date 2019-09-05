@@ -60,5 +60,20 @@ namespace Modeless_Dialog_Box {
 
 			this.Close();
 		}
+
+		private void RedRadioButton_Click(object sender, EventArgs e) {
+
+			SelectedColor = Color.Red;
+		}
+
+		private void GreenRadioButton_Click(object sender, EventArgs e) {
+
+			SelectedColor = Color.Green;
+		}
+
+		private void BlueRadioButton_Click(object sender, EventArgs e) {
+
+			SelectedColor = Color.Blue;
+		}
 	}
 }

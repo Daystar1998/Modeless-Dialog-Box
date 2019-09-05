@@ -39,6 +39,7 @@
 			this.redRadioButton.TabStop = true;
 			this.redRadioButton.Text = "Red";
 			this.redRadioButton.UseVisualStyleBackColor = true;
+			this.redRadioButton.Click += new System.EventHandler(this.RedRadioButton_Click);
 			// 
 			// greenRadioButton
 			// 
@@ -50,6 +51,7 @@
 			this.greenRadioButton.TabStop = true;
 			this.greenRadioButton.Text = "Green";
 			this.greenRadioButton.UseVisualStyleBackColor = true;
+			this.greenRadioButton.Click += new System.EventHandler(this.GreenRadioButton_Click);
 			// 
 			// blueRadioButton
 			// 
@@ -61,6 +63,7 @@
 			this.blueRadioButton.TabStop = true;
 			this.blueRadioButton.Text = "Blue";
 			this.blueRadioButton.UseVisualStyleBackColor = true;
+			this.blueRadioButton.Click += new System.EventHandler(this.BlueRadioButton_Click);
 			// 
 			// okButton
 			// 
